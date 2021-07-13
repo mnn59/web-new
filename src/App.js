@@ -1,12 +1,17 @@
-// import logo from './logo.svg';
-import './App.css';
+import classes from './App.module.css';
+import {Component} from 'react'
+import Layout from './components/Layout/Layout'
 
-function App() {
-  return (
-    <div className="App">
-      hello bye zero
-    </div>
-  );
+class App extends Component {
+    render() {
+        return (
+            <div className={classes.App}>
+                <Layout>
+                    <p>test</p>
+                </Layout>
+            </div>
+        );
+    }
 }
 
 export default App;
