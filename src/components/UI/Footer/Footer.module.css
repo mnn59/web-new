@@ -1,6 +1,6 @@
 .div__Footer{
-    position: fixed;
-    bottom: 0;
+    /*position: fixed;*/
+    /*bottom: 0;*/
     background-color: rgb(49,52,54);
     color: rgb(114,120,125);
     height: 60px;
@@ -10,5 +10,5 @@
     vertical-align: auto;
     flex-direction: column;
     text-align: center;
-    /*margin-bottom: -7px;*/
+    margin-bottom: -8px;
 }
