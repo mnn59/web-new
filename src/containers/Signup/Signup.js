@@ -1,5 +1,4 @@
 import React from 'react'
-// import classes from './Login.module.css'
 import {Link} from "react-router-dom";
 
 const signup = () => {
