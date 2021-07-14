@@ -1,3 +1,39 @@
-.Header{
+.Header {
+    background-color: white;
+    height: 65px;
+    padding-left: 5px;
+}
 
+.Navbar {
+    text-align: right;
+    margin-right: 2em;
+}
+
+.menu__row {
+}
+
+.menu__list {
+    display: inline;
+    padding: 0 25px;
+}
+
+.menu__link {
+    text-decoration: none;
+}
+
+.menu__link:link, .menu__link:visited {
+    color: black;
+}
+
+.menu__link:hover {
+    color: rgb(14, 186, 197);
+    transition: 0.3s;
+}
+
+.menu__logo {
+    color: rgb(14, 186, 197);
+    font-size: 120%;
+    user-select: none;
+    float: right;
+    margin-top: -2px;
 }
