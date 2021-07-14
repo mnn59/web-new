@@ -1,0 +1,58 @@
+.productCard {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    font-family: "Yekan", sans-serif;
+    background-color: white;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.productImage {
+    width: 200px;
+    height: 200px;
+}
+
+.productTitle {
+    text-align: right;
+    padding: 15px;
+    font-size: 22px;
+    margin-top: -28px;
+}
+
+.productSubTitle {
+    color: grey;
+    text-align: right;
+    padding: 15px;
+    margin-top: -52px;
+}
+
+.divider {
+    width: 85%;
+    border: 1px solid #dbd9d9;
+}
+
+.productPriceSection {
+    direction: rtl;
+    /*display: block;*/
+}
+
+.productPrice {
+    text-align: right;
+}
+
+.BuyButton {
+    border: none;
+    outline: 0;
+    padding: 1px 12px 1px 12px;
+    color: white;
+    background-color: dodgerblue;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: left;
+    border-radius: 24px;
+}
+
+.BuyButton:hover {
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+}
