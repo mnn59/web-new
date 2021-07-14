@@ -1,0 +1,34 @@
+.div__HeroHeader{
+    background-color: #ee612c;
+    position: relative;
+    height: 600px;
+    width: 1280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.p__title{
+    direction: rtl;
+    color: white;
+    font-size: 200%;
+}
+
+.input__searchBarText{
+    width: 70%;
+    max-width: 1280px;
+    margin-top: 40px;
+    border-radius: 24px;
+    border: 2px solid white;
+    text-align: center;
+    direction: rtl;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.image__HeroHeader{
+    margin-bottom: -54px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+}
