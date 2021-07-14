@@ -1,12 +1,17 @@
-import React from "react";
+import React, {Component} from "react";
 import classes from "./SearchButton.module.css"
+import classNames from "classnames";
 
-const searchButton = (props) => {
-    return (
-        <button type="button" className={classes.searchBtn}>
-            {props.value}
-        </button>
-    )
+class searchButton extends Component {
+    render(){
+        const btnClass = classNames(classes.searchBtn, this.props.className);
+        return (
+            <button type="button" className={btnClass}>
+                {this.props.value}
+            </button>
+        )
+    }
+
 }
 
 export default searchButton;
