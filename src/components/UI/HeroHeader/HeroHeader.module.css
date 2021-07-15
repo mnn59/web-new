@@ -7,15 +7,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: background .25s ease;
 }
 
-.p__title{
+.p__title {
     direction: rtl;
     color: white;
     font-size: 200%;
 }
 
-.input__searchBarText{
+.input__searchBarText {
     width: 70%;
     max-width: 1280px;
     margin-top: 40px;
@@ -26,7 +27,7 @@
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.image__HeroHeader{
+.image__HeroHeader {
     margin-bottom: -54px;
     margin-right: auto;
     margin-left: auto;
