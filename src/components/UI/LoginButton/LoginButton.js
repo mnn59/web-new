@@ -1,16 +1,15 @@
 import React from "react";
 import classes from "./LoginButton.module.css"
-import { Redirect } from "react-router-dom"
+import {useHistory} from 'react-router-dom'
 
-const loginButton = (props) => {
+const LoginButton = (props) => {
+    let history = useHistory()
     const handleButton = () => {
-        return (
-           <Redirect to="/login"/>
-        )
+        history.push('/login')
     }
     return (
         <button className={classes.LoginButton} onClick={handleButton}>{props.value}</button>
     )
 }
 
-export default loginButton;
+export default LoginButton;
