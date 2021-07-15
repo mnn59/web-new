@@ -1,9 +1,11 @@
 import React from "react";
 import classes from './Footer.module.css'
+import classNames from "classnames";
 
-const footer = () => {
+const footer = (props) => {
+    const footerClass = classNames(props.className, classes.div__Footer)
     return (
-        <div className={classes.div__Footer}>
+        <div className={footerClass}>
             تمامی حقوق برای سعید و مهدی محفوظ است
         </div>
     )
