@@ -1,0 +1,62 @@
+.Signup {
+    /*border: 1px solid green;*/
+    background-color: rgb(247, 247, 247);
+    height: 100%;
+}
+
+
+.grid_container {
+    /*border: 1px solid red;*/
+    display: grid;
+    height: 570px;
+    align-content: center;
+    grid-template-areas:
+    "labeledInputFamilyName labeledInputName"
+    "labeledInputPassword labeledInputEmail"
+    "labeledInputAddress labeledInputAddress"
+    ;
+}
+
+.grid_container > strong {
+    /*border: 1px solid black;*/
+    /*text-align: center;*/
+    margin-bottom: 30px;
+    color: rgb(14, 186, 197);
+}
+
+.signupButton {
+
+}
+
+
+
+
+.labelClassname{
+    width: 72px;
+}
+
+
+.labeledInputName {
+    grid-area: labeledInputName;
+    border: 1px solid black;
+}
+
+.labeledInputFamilyName {
+    grid-area: labeledInputFamilyName;
+    border: 1px solid red;
+}
+
+.labeledInputEmail {
+    grid-area: labeledInputEmail;
+    border: 1px solid blue;
+}
+
+.labeledInputPassword {
+    grid-area: labeledInputPassword;
+    border: 1px solid yellowgreen;
+}
+
+.labeledInputAddress {
+    grid-area: labeledInputAddress;
+    border: 1px solid fuchsia;
+}
