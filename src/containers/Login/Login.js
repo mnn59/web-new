@@ -34,7 +34,7 @@ const login = () => {
                 {/*<LabeledInput placeholder="رمز عبور خود را وارد کنید ..." label="رمز عبور"/>*/}
                 <SearchButton value="ورود" className={classes.login_button}/>
             </div>
-            <Footer />
+            <Footer className={classes.footerHere}/>
         </Auxiliary>
 
     )
