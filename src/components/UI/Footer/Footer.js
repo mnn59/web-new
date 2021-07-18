@@ -6,7 +6,7 @@ const footer = (props) => {
     const footerClass = classNames(props.className, classes.div__Footer)
     return (
         <div className={footerClass}>
-            تمامی حقوق برای سعید و مهدی محفوظ است
+            تمامی حقوق برای مهدی محفوظ است
         </div>
     )
 }
