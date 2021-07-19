@@ -1,10 +1,10 @@
 .grid_container{
     color: black;
     font-size: 25px;
-    padding: 20px;
+    /*padding: 20px;*/
     display: grid;
     grid-template-columns: 260px 100px;
-    row-gap: 20px;
+    /*row-gap: 20px;*/
     justify-content: center;
     height: 100%;
     align-items: center;
@@ -30,10 +30,11 @@
     background-color: rgb(14,186,197);
     font-size: 15px;
     text-align: center;
-    align-content: center;
+    /*align-content: center;*/
     border-radius: 0 10px 10px 0;
     padding: 15px;
     height: 22px;
+    width: 72px;
     color: white;
 }
 
