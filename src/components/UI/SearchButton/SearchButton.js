@@ -6,7 +6,7 @@ class searchButton extends Component {
     render(){
         const btnClass = classNames(classes.searchBtn, this.props.className);
         return (
-            <button type="button" className={btnClass}>
+            <button type="button" className={btnClass} onClick={this.props.onClick}>
                 {this.props.value}
             </button>
         )
