@@ -5,13 +5,20 @@ import classNames from "classnames";
 const labeledInput = (props) => {
     const containerClass = classNames(classes.grid_container, props.className)
     // const labelClass = classNames(classes.label_item, props.labelClassName)
-
+    const inputClasses = [classes.input]
     let InputElement = null
+
+    if (props.invalid && props.touched){
+        inputClasses.push(classes.Invalid)
+    }
+    if (!props.invalid && props.touched){
+        inputClasses.push(classes.Valid)
+    }
 
     switch (props.elementType) {
         case ('input'):
             InputElement = <input
-                className={classes.input}
+                className={inputClasses.join(' ')}
                 {...props.elementConfig}
                 value={props.value}
                 onChange={props.changed}
@@ -19,7 +26,7 @@ const labeledInput = (props) => {
             break
         case ('textarea'):
             InputElement = <textarea
-                className={classes.input}
+                className={inputClasses.join(' ')}
                 {...props.elementConfig}
                 value={props.value}
                 onChange={props.changed}
@@ -27,7 +34,7 @@ const labeledInput = (props) => {
             break
         default:
             InputElement = <input
-                className={classes.input}
+                className={inputClasses.join(' ')}
                 {...props.elementConfig}
                 value={props.value}
                 onChange={props.changed}

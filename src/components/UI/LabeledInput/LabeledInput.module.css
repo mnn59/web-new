@@ -38,3 +38,10 @@
     color: white;
 }
 
+.Invalid{
+    border: 3px solid #ea8276;
+}
+
+.Valid{
+    border: 3px solid #1ae91a;
+}
