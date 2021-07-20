@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, {Component , useState} from 'react'
 import {Link} from "react-router-dom";
 import LabeledInput from '../../components/UI/LabeledInput/LabeledInput'
 import classes from './Signup.module.css'
@@ -18,7 +18,13 @@ class signup extends Component {
                 },
                 label: 'نام',
                 value: '',
-                className: 'classes.labeledInputName'
+                className: 'classes.labeledInputName',
+                validation: {
+                    required: true,
+                    maxLength: 255
+                },
+                valid: false,
+                touched: false
             },
             familyName: {
                 elementType: 'input',
@@ -28,7 +34,13 @@ class signup extends Component {
                 },
                 label: 'نام خانوادگی',
                 value: '',
-                className: 'classes.labeledInputFamilyName'
+                className: 'classes.labeledInputFamilyName',
+                validation: {
+                    required: true,
+                    maxLength: 255
+                },
+                valid: false,
+                touched: false
             },
             email: {
                 elementType: 'input',
@@ -38,7 +50,14 @@ class signup extends Component {
                 },
                 label: 'ایمیل',
                 value: '',
-                className: 'classes.labeledInputEmail'
+                className: 'classes.labeledInputEmail',
+                validation: {
+                    required: true,
+                    emailRegex: '[a-zA-Z0-9.]+@[a-zA-Z0-9]+\\.[A-Za-z]+',
+                    maxLength: 255
+                },
+                valid: false,
+                touched: false
             },
             password: {
                 elementType: 'input',
@@ -48,7 +67,15 @@ class signup extends Component {
                 },
                 label: 'رمز عبور',
                 value: '',
-                className: 'classes.labeledInputPassword'
+                className: 'classes.labeledInputPassword',
+                validation: {
+                    required: true,
+                    minLength: 8,
+                    maxLength: 255,
+                    passwordRegex: '(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)'
+                },
+                valid: false,
+                touched: false
             },
             address: {
                 elementType: 'textarea',
@@ -58,11 +85,84 @@ class signup extends Component {
                 },
                 label: 'آدرس',
                 value: '',
-                className: 'classes.labeledInputAddress'
+                className: 'classes.labeledInputAddress',
+                validation: {
+                    required: true,
+                    maxLength: 1000
+                },
+                valid: false,
+                touched: false
             }
-        }
+        },
+        formIsValid: false
     }
 
+    checkValidity(value, rules) {
+        let isValid = true
+        if (rules.required) {
+            isValid = value.trim() !== '' && isValid
+        }
+        if (rules.minLength) {
+            isValid = value.length >= rules.minLength && isValid
+        }
+        if ( rules.maxLength) {
+            isValid = value.length <= rules.maxLength && isValid
+        }
+        if (rules.emailRegex) {
+            isValid = value.match(rules.emailRegex) && isValid
+        }
+
+        if (rules.passwordRegex) {
+            isValid = value.match(rules.passwordRegex) && isValid
+        }
+        return isValid
+    }
+
+    signupHandler = async (event) => {
+        // event.preventDefault()
+        // // const signupOrder = {
+        // //
+        // // }
+        // const updatedSignupForm = {
+        //     ...this.state.signupForm
+        // }
+        // const updatedFormElement = {    //deep clone
+        //     ...updatedSignupForm[inputIdentifier]
+        // }
+        // updatedFormElement.value = event.target.value
+        // updatedSignupForm[inputIdentifier] = updatedFormElement
+        // console.log(updatedSignupForm)
+
+
+
+        // here
+
+        event.preventDefault()
+        const formData = {}
+        for (let formElementIdentifier in this.state.signupForm) {
+            formData[formElementIdentifier] = this.state.signupForm[formElementIdentifier].value
+        }
+        const signupRequestOrder = {
+            signupData: formData
+            // axios.post
+        }
+
+
+        console.log(signupRequestOrder)
+
+
+        const response = await fetch('http://localhost:8000/api/register',{
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            // body: JSON.stringify(signupRequestOrder)
+            body: JSON.stringify(formData)
+        })
+
+        const content = response.json()
+        console.log(content) // what server returns to us?
+
+
+    }
 
     inputChangedHandler = (event, inputIdentifier) => {
         const updatedSignupForm = {
@@ -72,9 +172,18 @@ class signup extends Component {
             ...updatedSignupForm[inputIdentifier]
         }
         updatedFormElement.value = event.target.value
+        updatedFormElement.valid = this.checkValidity(updatedFormElement.value, updatedFormElement.validation)
+        updatedFormElement.touched = true
         updatedSignupForm[inputIdentifier] = updatedFormElement
-        this.setState({signupForm: updatedSignupForm})
+
+        let formIsValid = true
+        for (let inputIdentifier in updatedSignupForm) {
+            formIsValid = updatedSignupForm[inputIdentifier].valid && formIsValid
+        }
+        // console.log(formIsValid)
+        this.setState({signupForm: updatedSignupForm, formIsValid: formIsValid})
     }
+
 
 
     render() {
@@ -85,11 +194,19 @@ class signup extends Component {
                 config: this.state.signupForm[key]
             })
         }
+
+        // const [name, setName] = useState('')
+        // const [familyName, setFamilyName] = useState('')
+        // const [email, setEmail] = useState('')
+        // const [password, setPassword] = useState('')
+        // const [address, setAddress] = useState('')
+
+
         return (
             <Auxiliary>
                 <Header/>
                 <div className={classes.Signup}>
-                    <form className={classes.grid_container}>
+                    <form className={classes.grid_container} onSubmit={this.signupHandler}>
                         {/*<strong>فروشگاه - ثبت نام</strong>*/}
                         {/*<LabeledInput inputtype="input" type="text" placeholder="نام خود را وارد کنید ..." label="نام"*/}
                         {/*              className={classes.labeledInputName}/>*/}
@@ -120,10 +237,17 @@ class signup extends Component {
                                 label={formElement.config.label}
                                 value={formElement.config.value}
                                 className={formElement.config.className}    //classes did not apply
+                                invalid={!formElement.config.valid}
+                                touched={formElement.config.touched}
                                 changed={(event) => this.inputChangedHandler(event, formElement.id)}
                             />
                         ))}
-                        <SignupButton value="ثبت نام" className={classes.signupButton}/>
+                        <SignupButton
+                            value="ثبت نام"
+                            className={classes.signupButton}
+                            disabled={!this.state.formIsValid}
+                            type="submit"
+                        />
                     </form>
 
                 </div>
