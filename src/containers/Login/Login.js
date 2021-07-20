@@ -51,6 +51,7 @@ const login = () => {
                     value="ورود"
                     className={classes.login_button}
                     onClick={LoginButtonHandler}
+                    type="submit"
                 />
             </div>
             <Footer className={classes.footerHere}/>
