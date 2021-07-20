@@ -32,7 +32,7 @@ class HeroHeader extends Component {
                 </p>
                 <input type="text" placeholder="نام محصول خود را جستجو کنید ..."
                        className={classes.input__searchBarText}/>
-                <SearchButton value="جستجو کنید"/>
+                <SearchButton type="button" value="جستجو کنید"/>
                 <img src={clock} alt="clock" className={classes.image__HeroHeader}/>
             </div>
         )
