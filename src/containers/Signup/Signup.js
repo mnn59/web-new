@@ -1,4 +1,4 @@
-import React, {Component , useState} from 'react'
+import React, {Component, useState} from 'react'
 import {Link} from "react-router-dom";
 import LabeledInput from '../../components/UI/LabeledInput/LabeledInput'
 import classes from './Signup.module.css'
@@ -6,8 +6,10 @@ import Footer from '../../components/UI/Footer/Footer'
 import Header from '../../components/UI/Header/Header'
 import Auxiliary from "../../hoc/Auxiliary";
 import SignupButton from '../../components/UI/SearchButton/SearchButton'
+import {Redirect} from "react-router-dom";
 
 class signup extends Component {
+
     state = {
         signupForm: {
             name: {
@@ -94,7 +96,8 @@ class signup extends Component {
                 touched: false
             }
         },
-        formIsValid: false
+        formIsValid: false,
+        redirect: false,
     }
 
     checkValidity(value, rules) {
@@ -105,7 +108,7 @@ class signup extends Component {
         if (rules.minLength) {
             isValid = value.length >= rules.minLength && isValid
         }
-        if ( rules.maxLength) {
+        if (rules.maxLength) {
             isValid = value.length <= rules.maxLength && isValid
         }
         if (rules.emailRegex) {
@@ -118,25 +121,9 @@ class signup extends Component {
         return isValid
     }
 
+
+
     signupHandler = async (event) => {
-        // event.preventDefault()
-        // // const signupOrder = {
-        // //
-        // // }
-        // const updatedSignupForm = {
-        //     ...this.state.signupForm
-        // }
-        // const updatedFormElement = {    //deep clone
-        //     ...updatedSignupForm[inputIdentifier]
-        // }
-        // updatedFormElement.value = event.target.value
-        // updatedSignupForm[inputIdentifier] = updatedFormElement
-        // console.log(updatedSignupForm)
-
-
-
-        // here
-
         event.preventDefault()
         const formData = {}
         for (let formElementIdentifier in this.state.signupForm) {
@@ -144,26 +131,37 @@ class signup extends Component {
         }
         const signupRequestOrder = {
             signupData: formData
-            // axios.post
         }
+        // console.log(signupRequestOrder)
 
 
-        console.log(signupRequestOrder)
-
-
-
-        const response = await fetch('http://localhost:8000/api/register',{
+        // response
+        await fetch('http://localhost:8000/api/register', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            // body: JSON.stringify(signupRequestOrder)
             body: JSON.stringify(formData)
         })
 
-        const content = response.json()
-        console.log(content) // what server returns to us?
+        // const content = await response.json()
+        // console.log(content) // what server returns to us?
+
+        // this.setState({redirect: true})
+        // this.redirectToLoginPage()   // for redirect to login but I could not
+
+
 
 
     }
+
+
+    // redirect to login page
+    // redirectToLoginPage = () => {
+    //     if (this.state.redirect) {
+    //         return <Redirect to="/login"/>
+    //     }
+    // }
+
+
 
     inputChangedHandler = (event, inputIdentifier) => {
         const updatedSignupForm = {
@@ -184,7 +182,6 @@ class signup extends Component {
         // console.log(formIsValid)
         this.setState({signupForm: updatedSignupForm, formIsValid: formIsValid})
     }
-
 
 
     render() {
