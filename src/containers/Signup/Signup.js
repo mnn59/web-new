@@ -247,9 +247,8 @@ class signup extends Component {
                             type="submit"
                         />
                     </form>
-
                 </div>
-                <Footer/>
+                <Footer className={classes.footerHereInSignup}/>
             </Auxiliary>
         )
     }
