@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./Header.module.css"
 import LoginButton from "../LoginButton/LoginButton"
+import {Link} from "react-router-dom";
 
 const header = () => {
     return (
@@ -21,7 +22,11 @@ const header = () => {
                         <a href="#" className={classes.menu__link}>صفحه اول</a>
                     </li>
                     <li className={classes.menu__list}>
-                        <p className={classes.menu__logo}>فروشگاه</p>
+                        <p>
+                            <Link to="/" className={classes.menu__logo}>
+                                فروشگاه
+                            </Link>
+                        </p>
                     </li>
                 </ul>
             </div>
