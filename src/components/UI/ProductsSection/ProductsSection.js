@@ -14,93 +14,93 @@ const productsSection = () => {
                     image={bag}
                     title="موس گیمینگ ریزر"
                     subTitle="دسته بندی یک"
-                    price="۱۰۰۰۰"
+                    price="۱۰.۰۰۰"
                     buttonValue="خرید محصول"
                 />
                 <Card
                     image={bag}
                     title="موس گیمینگ ریزر"
                     subTitle="دسته بندی یک"
-                    price="۱۰۰۰۰"
+                    price="۱۰.۰۰۰"
                     buttonValue="خرید محصول"
                 />
                 <Card
                     image={bag}
                     title="موس گیمینگ ریزر"
                     subTitle="دسته بندی یک"
-                    price="۱۰۰۰۰"
+                    price="۱۰.۰۰۰"
                     buttonValue="خرید محصول"
                 />
                 <Card
                     image={bag}
                     title="موس گیمینگ ریزر"
                     subTitle="دسته بندی یک"
-                    price="۱۰۰۰۰"
+                    price="۱۰.۰۰۰"
                     buttonValue="خرید محصول"
                 />
                 <Card
                     image={bag}
                     title="موس گیمینگ ریزر"
                     subTitle="دسته بندی یک"
-                    price="۱۰۰۰۰"
+                    price="۱۰.۰۰۰"
                     buttonValue="خرید محصول"
                 />
                 <Card
                     image={bag}
                     title="موس گیمینگ ریزر"
                     subTitle="دسته بندی یک"
-                    price="۱۰۰۰۰"
+                    price="۱۰.۰۰۰"
                     buttonValue="خرید محصول"
                 />
-                <Card
-                    image={bag}
-                    title="موس گیمینگ ریزر"
-                    subTitle="دسته بندی یک"
-                    price="۱۰۰۰۰"
-                    buttonValue="خرید محصول"
-                />
-                <Card
-                    image={bag}
-                    title="موس گیمینگ ریزر"
-                    subTitle="دسته بندی یک"
-                    price="۱۰۰۰۰"
-                    buttonValue="خرید محصول"
-                />
-                <Card
-                    image={bag}
-                    title="موس گیمینگ ریزر"
-                    subTitle="دسته بندی یک"
-                    price="۱۰۰۰۰"
-                    buttonValue="خرید محصول"
-                />
-                <Card
-                    image={bag}
-                    title="موس گیمینگ ریزر"
-                    subTitle="دسته بندی یک"
-                    price="۱۰۰۰۰"
-                    buttonValue="خرید محصول"
-                />
-                <Card
-                    image={bag}
-                    title="موس گیمینگ ریزر"
-                    subTitle="دسته بندی یک"
-                    price="۱۰۰۰۰"
-                    buttonValue="خرید محصول"
-                />
-                <Card
-                    image={bag}
-                    title="موس گیمینگ ریزر"
-                    subTitle="دسته بندی یک"
-                    price="۱۰۰۰۰"
-                    buttonValue="خرید محصول"
-                />
-                <Card
-                    image={bag}
-                    title="موس گیمینگ ریزر"
-                    subTitle="دسته بندی یک"
-                    price="۱۰۰۰۰"
-                    buttonValue="خرید محصول"
-                />
+                {/*<Card*/}
+                {/*    image={bag}*/}
+                {/*    title="موس گیمینگ ریزر"*/}
+                {/*    subTitle="دسته بندی یک"*/}
+                {/*    price="۱۰۰۰۰"*/}
+                {/*    buttonValue="خرید محصول"*/}
+                {/*/>*/}
+                {/*<Card*/}
+                {/*    image={bag}*/}
+                {/*    title="موس گیمینگ ریزر"*/}
+                {/*    subTitle="دسته بندی یک"*/}
+                {/*    price="۱۰۰۰۰"*/}
+                {/*    buttonValue="خرید محصول"*/}
+                {/*/>*/}
+                {/*<Card*/}
+                {/*    image={bag}*/}
+                {/*    title="موس گیمینگ ریزر"*/}
+                {/*    subTitle="دسته بندی یک"*/}
+                {/*    price="۱۰۰۰۰"*/}
+                {/*    buttonValue="خرید محصول"*/}
+                {/*/>*/}
+                {/*<Card*/}
+                {/*    image={bag}*/}
+                {/*    title="موس گیمینگ ریزر"*/}
+                {/*    subTitle="دسته بندی یک"*/}
+                {/*    price="۱۰۰۰۰"*/}
+                {/*    buttonValue="خرید محصول"*/}
+                {/*/>*/}
+                {/*<Card*/}
+                {/*    image={bag}*/}
+                {/*    title="موس گیمینگ ریزر"*/}
+                {/*    subTitle="دسته بندی یک"*/}
+                {/*    price="۱۰۰۰۰"*/}
+                {/*    buttonValue="خرید محصول"*/}
+                {/*/>*/}
+                {/*<Card*/}
+                {/*    image={bag}*/}
+                {/*    title="موس گیمینگ ریزر"*/}
+                {/*    subTitle="دسته بندی یک"*/}
+                {/*    price="۱۰۰۰۰"*/}
+                {/*    buttonValue="خرید محصول"*/}
+                {/*/>*/}
+                {/*<Card*/}
+                {/*    image={bag}*/}
+                {/*    title="موس گیمینگ ریزر"*/}
+                {/*    subTitle="دسته بندی یک"*/}
+                {/*    price="۱۰۰۰۰"*/}
+                {/*    buttonValue="خرید محصول"*/}
+                {/*/>*/}
 
 
                 {/*<SortByBox />*/}
