@@ -67,6 +67,6 @@
 
 
 .footerHere{
-    position: fixed;
-    bottom: 0;
+    position: absolute;
+    bottom: 0em;
 }
