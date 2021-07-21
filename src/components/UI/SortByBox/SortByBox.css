@@ -1,0 +1,28 @@
+.container{
+    border: 1px solid red;
+    background-color: #61dafb;
+}
+
+.list{
+    position: relative;
+    display: inline;
+    padding: 0 20px;
+}
+.list:before{
+    content: attr(data-label);
+    position: absolute;
+    left: 1px;
+}
+
+.list_item{
+    margin-left: 25px;
+}
+
+.list_item_link{
+    text-decoration: none;
+    color: black;
+}
+.list_item_link:active{
+    border-radius: 4px;
+    background-color: #61dafb;
+}
