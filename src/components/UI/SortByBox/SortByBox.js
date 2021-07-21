@@ -1,5 +1,5 @@
 import React from "react"
-import classes from "./SortByBox.css"
+import classes from "./SortByBox.module.css"
 
 
 // class does not appear in other classes like login
