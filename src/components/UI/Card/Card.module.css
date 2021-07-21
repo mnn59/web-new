@@ -59,7 +59,7 @@
     text-align: left;
     border-radius: 24px;
     float: left;
-    /*box-shadow: 0 8px 8px rgba(0, 0, 200, 0.2);*/
+    box-shadow: 0 4px 4px rgba(0, 0, 250, 0.2);
 }
 
 .BuyButton:hover {
