@@ -29,15 +29,17 @@
 
 .label {
     cursor: pointer;
+    display: -webkit-box;
+    padding: 2px;
 }
 
-.input{
-    margin-left: 5px;
-    visibility: hidden;
-    position: absolute;
-}
+/*.input{*/
+/*    margin-left: 5px;*/
+/*    visibility: hidden;*/
+/*    position: absolute;*/
+/*}*/
 
 
-.check{
+/*.check{*/
 
-}
+/*}*/
