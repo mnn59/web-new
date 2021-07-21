@@ -10,7 +10,7 @@ const card = (props) => {
             <hr className={classes.divider}/>
             <div className={classes.productPriceSection}>
                 <p className={classes.productPrice}>
-                     تومان{props.price}
+                    {props.price} تومان
                 </p>
                 <button className={classes.BuyButton}>{props.buttonValue}</button>
             </div>

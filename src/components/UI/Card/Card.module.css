@@ -1,11 +1,14 @@
 .productCard {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    margin: auto;
+    /*max-width: 300px;*/
+    width: 250px;
+    /*margin: auto;*/
     font-family: "Yekan", sans-serif;
     background-color: white;
     padding: 10px;
     border-radius: 4px;
+    text-align: center;
+    margin: 10px;
 }
 
 .productImage {
@@ -35,10 +38,14 @@
 .productPriceSection {
     direction: rtl;
     /*display: block;*/
+    padding: 5px;
 }
 
 .productPrice {
-    text-align: right;
+    /*text-align: right;*/
+    direction: rtl;
+    float: right;
+    margin-top: -2px;
 }
 
 .BuyButton {
@@ -51,8 +58,10 @@
     font-size: 14px;
     text-align: left;
     border-radius: 24px;
+    float: left;
+    /*box-shadow: 0 8px 8px rgba(0, 0, 200, 0.2);*/
 }
 
 .BuyButton:hover {
-    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 8px rgba(0, 0, 200, 0.2);
 }
