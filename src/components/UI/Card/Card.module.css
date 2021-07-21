@@ -21,6 +21,7 @@
     padding: 15px;
     font-size: 22px;
     margin-top: -28px;
+    user-select: none;
 }
 
 .productSubTitle {
@@ -28,6 +29,7 @@
     text-align: right;
     padding: 15px;
     margin-top: -52px;
+    user-select: none;
 }
 
 .divider {
@@ -46,6 +48,7 @@
     direction: rtl;
     float: right;
     margin-top: -2px;
+    user-select: none;
 }
 
 .BuyButton {
