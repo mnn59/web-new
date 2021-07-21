@@ -1,5 +1,68 @@
+.container{
+    display: grid;
+    grid-template-areas:
+    "sortByBox sortByBox sortByBox"
+    "productsSection productsSection groupingBox"
+;
+}
+
 .productsSection{
+    grid-area: productsSection;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
     background-color: lightgray;
     padding: 10px;
-    margin-bottom: 10px;
+    /*margin-bottom: 10px;*/
+}
+
+
+.sortByBox{
+    grid-area: sortByBox;
+    /*border: 1px solid darkblue;*/
+    padding: 10px;
+    background-color: lightgray;
+
+}
+
+.sortByCard{
+    background-color: white;
+    border-radius: 4px;
+    padding: 10px;
+    height: 75px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+
+.groupingBox{
+    grid-area: groupingBox;
+    /*border: 1px solid black;*/
+    padding: 10px;
+    background-color: lightgray;
+    /*margin-bottom: 10px;*/
+    width: 365px;
+    /*height: 310px;*/
+}
+
+.groupCard{
+    background-color: white;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    height: 270px;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+}
+
+.setPriceCard{
+    background-color: white;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-right: 10px;
+    height: 150px;
 }
