@@ -12,6 +12,7 @@
     direction: rtl;
     color: white;
     font-size: 200%;
+    user-select: none;
 }
 
 .input__searchBarText {
