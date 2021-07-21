@@ -1,5 +1,4 @@
 .div__HeroHeader{
-    background-color: #ee612c;
     position: relative;
     height: 600px;
     width: 1280px;
@@ -7,7 +6,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: background .25s ease;
 }
 
 .p__title {
@@ -17,7 +15,7 @@
 }
 
 .input__searchBarText {
-    width: 70%;
+    width: 45%;
     max-width: 1280px;
     margin-top: 40px;
     border-radius: 24px;
