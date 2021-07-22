@@ -15,6 +15,9 @@
     background-color: lightgray;
     padding: 10px;
     /*margin-bottom: 10px;*/
+    height: 1200px;
+    /*margin-top: -300px;*/
+    align-content: flex-start;
 }
 
 
