@@ -17,11 +17,13 @@
 }
 
 .notFoundImage{
-    width: 500px;
+    width: 450px;
     padding: 20px;
     /*margin-top: 50px;*/
 }
 
 .footer{
-    margin-bottom: 0;
+    /*margin-bottom: 0;*/
+    position: absolute;
+    bottom: 0em;
 }

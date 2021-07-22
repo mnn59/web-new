@@ -6,7 +6,15 @@ import {Link} from "react-router-dom";
 const header = () => {
     return (
         <div className={classes.Header}>
-            <LoginButton value="ورود / ثبت نام"/>
+            <LoginButton value="ورود / ثبت نام" className={classes.loginButton}>
+                {/*<div className={classes.dropdownContentInMenu}>*/}
+                {/*    <a href="#">پروفایل</a>*/}
+                {/*    <a href="#">خروج از حساب</a>*/}
+                {/*</div>*/}
+            </LoginButton>
+
+
+
             <div className={classes.Navbar}>
                 <ul className={classes.menu__row}>
                     <li className={classes.menu__list}>

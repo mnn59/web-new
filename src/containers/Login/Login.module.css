@@ -1,28 +1,35 @@
-* {
-    /*margin: 0;*/
-}
-
-
 .grid_container {
-    background-color: rgb(247,247,247);
+    background-color: rgb(247, 247, 247);
     color: black;
     font-size: 25px;
     padding: 20px;
     display: grid;
-    grid-template-columns: 260px 100px;
+    grid-template-areas:
+    "grid_header"
+    "labeledInputEmail"
+    "labeledInputPassword"
+    "loginButton"
+    ;
+    align-content: center;
+    gap: 15px;
+    /*grid-template-columns: 260px 100px;*/
     /*grid-template-rows: 80px 20px 80px;*/
-    row-gap: 20px;
-    justify-content: center;
-    height: 100%;
+    /*row-gap: 20px;*/
+    /*justify-content: center;*/
+    height: 580px;
     /*width: 70%;*/
-    align-items: center;
+    /*align-items: center;*/
 }
 
 
-.grid_header{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    color: rgb(14,186,197);
+.grid_header {
+    grid-area: grid_header;
+    /*grid-column-start: 2;*/
+    /*grid-column-end: 3;*/
+    color: rgb(14, 186, 197);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 20px;
 }
 
 .grid_item {
@@ -39,7 +46,7 @@
 /*}*/
 
 .label_item {
-    background-color: rgb(14,186,197);
+    background-color: rgb(14, 186, 197);
     font-size: 15px;
     text-align: center;
     align-content: center;
@@ -58,7 +65,7 @@
 }
 
 
-.login_button{
+.login_button {
     /*align-items: center;*/
     /*justify-content: center;*/
     grid-column-start: 2;
@@ -66,7 +73,37 @@
 }
 
 
-.footerHere{
+.footerHere {
     position: absolute;
     bottom: 0em;
+}
+
+.labeledInputEmail {
+    grid-area: labeledInputEmail;
+}
+
+.labeledInputPassword {
+    grid-area: labeledInputPassword;
+}
+
+.loginButton{
+    grid-area: loginButton;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    justify-self: center;
+    align-self: center;
+    width: 140px;
+}
+
+.headerModal{
+
+}
+
+.h2Tag{
+    text-align: center;
+}
+
+.h2Tag > a {
+    text-decoration: none;
+    color: rgb(14, 186, 197);
 }

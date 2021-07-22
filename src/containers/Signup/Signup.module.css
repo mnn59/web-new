@@ -8,34 +8,42 @@
 .grid_container {
     /*border: 1px solid red;*/
     display: grid;
-    height: 570px;
+    /*height: 570px;*/
+    height: 635px;
     align-content: center;
     grid-template-areas:
+    "formHeader formHeader"
     "labeledInputFamilyName labeledInputName"
     "labeledInputPassword labeledInputEmail"
     "labeledInputAddress labeledInputAddress"
-    ;
-    gap: 0;
+    "signupButton signupButton";
+    gap: 15px;
     /*grid-template-columns: 1fr 1fr;*/
     /*grid-template-rows: 1fr 1fr 1fr;*/
 }
 
-.grid_container > strong {
+.formHeader {
+    grid-area: formHeader;
     /*border: 1px solid black;*/
-    /*text-align: center;*/
+    text-align: center;
     margin-bottom: 30px;
     color: rgb(14, 186, 197);
-    grid-row-start: 1;
-    grid-row-end: 3;
+    /*grid-row-start: 1;*/
+    /*grid-row-end: 3;*/
+    font-size: 20px;
 }
 
 
 .signupButton {
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-area: signupButton;
+    /*grid-row-start: 2;*/
+    /*grid-row-end: 3;*/
+    grid-column-start: 1;
+    grid-column-end: 3;
+    justify-self: center;
+    align-self: center;
+    width: 140px;
 }
-
-
 
 
 /*.labelClassname{*/
@@ -69,7 +77,22 @@
 }
 
 
-.footerHereInSignup{
+.footerHereInSignup {
     position: absolute;
-    bottom: 0em;
+    /*bottom: 0em;*/
+    bottom: -1em;
+}
+
+.headerModal {
+    float: right;
+}
+
+.h2Tag {
+    text-align: center;
+    margin-right: -647px;
+}
+
+.h2Tag > a {
+    text-decoration: none;
+    color: rgb(14, 186, 197);
 }

@@ -1,70 +1,84 @@
 
-
-.container{
+.container {
     display: flex;
     flex-direction: column;
     position: relative;
-    width: 500px;
-    height: 300px;
-    background: yellowgreen;
+    width: 400px;
+    height: 74px;
+    background: rgb(238, 238, 238);
     margin: 100px auto 0;
     word-break: break-all;
-    border: 1px solid rgba(0, 0, 0, 0.274);
+    border: 2px solid rgb(138, 138, 138);
+    border-radius: 25px;
 }
 
-.block_tabs{
+.block_tabs {
     display: flex;
 }
 
-.tabs{
+.tabs {
     padding: 15px;
     text-align: center;
     width: 50%;
-    background: rgba(128, 128, 128, 0.075);
+    height: 45px;
+    /*background: rgba(128, 128, 128, 0.075);*/
     cursor: pointer;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+    border-bottom: 2px solid rgb(138, 138, 138);
     box-sizing: content-box;
     position: relative;
     outline: none;
+    color: rgb(138, 138, 138);
+    /*border-radius: 25px 0 0 25px;*/
 }
 
-.tabs:not(:last-child){
-    border-right: 1px solid rgba(0, 0, 0, 0.274);
+.tabs:first-child{
+    border-radius: 25px 0 0 25px;
 }
 
-.active_tabs{
-    background: white;
-    border-bottom: 1px solid transparent;
+.tabs:last-child{
+    border-radius: 0 25px 25px 0;
 }
 
-.active_tabs::before{
-    content: "";
-    display: block;
-    position: absolute;
-    top: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% + 2px);
-    height: 5px;
-    background: rgb(88, 147, 241);
+/*.tabs:not(:last-child) {*/
+/*    border-right: 1px solid red;*/
+/*}*/
+
+.active_tabs {
+    background: rgb(238, 238, 238);
+    color: #282c34;
+    border-bottom: 2px solid rgb(138, 138, 138);
+    border-radius: 25px;
+    /*border: none;*/
 }
+
+/*.active_tabs::before{*/
+/*    content: "";*/
+/*    display: block;*/
+/*    position: absolute;*/
+/*    top: -5px;*/
+/*    left: 50%;*/
+/*    transform: translateX(-50%);*/
+/*    width: calc(100% + 2px);*/
+/*    height: 5px;*/
+/*    background: rgb(88, 147, 241);*/
+/*}*/
 
 button {
     border: none;
 }
 
-.content_tabs{
+.content_tabs {
     flex-grow: 1;
 }
 
-.content{
-    background: white;
+.content {
+    background: rgb(238, 238, 238);
     padding: 20px;
     width: 100%;
     height: 100%;
     display: none;
 }
 
-.active_content{
+.active_content {
     display: block;
 }

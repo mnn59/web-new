@@ -40,3 +40,28 @@
     margin-right: -58px;
     text-decoration: none;
 }
+
+
+.dropdownContentInMenu{
+    padding-top:15px;
+    display: none;
+    width: 200px;
+    z-index: 1;
+    position: absolute;
+    border-radius: 4px;
+}
+
+.loginButton{
+    z-index: 2;
+}
+
+.loginButton:hover .dropdownContentInMenu{
+    display: flex;
+    flex-direction: column;
+    background-color: lightgrey;
+}
+
+.dropdownContentInMenu a:hover{
+    background-color: lightblue;
+    border-radius: 4px;
+}

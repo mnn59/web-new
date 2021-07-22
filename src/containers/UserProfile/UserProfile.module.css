@@ -1,3 +1,7 @@
+.container{
+    background: rgb(238, 238, 238);
+}
+
 .footerHere{
     position: fixed;
     bottom: 0;

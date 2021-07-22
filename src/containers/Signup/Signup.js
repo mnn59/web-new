@@ -7,8 +7,14 @@ import Header from '../../components/UI/Header/Header'
 import Auxiliary from "../../hoc/Auxiliary";
 import SignupButton from '../../components/UI/SearchButton/SearchButton'
 import {Redirect} from "react-router-dom";
+import NewModal from '../../components/UI/NewModal/NewModal'
 
 class signup extends Component {
+    constructor(props) {
+        super(props);
+        this.showModal = this.showModal.bind(this)
+        this.hideModal = this.hideModal.bind(this)
+    }
 
     state = {
         signupForm: {
@@ -98,6 +104,19 @@ class signup extends Component {
         },
         formIsValid: false,
         redirect: false,
+        show: false,
+    }
+
+    showModal = () => {
+        this.setState({
+            show: true
+        })
+    }
+
+    hideModal = () => {
+        this.setState({
+            show: false
+        })
     }
 
     checkValidity(value, rules) {
@@ -122,7 +141,6 @@ class signup extends Component {
     }
 
 
-
     signupHandler = async (event) => {
         event.preventDefault()
         const formData = {}
@@ -142,13 +160,16 @@ class signup extends Component {
             body: JSON.stringify(formData)
         })
 
+
+        this.setState({
+            redirect: true
+        })
+
         // const content = await response.json()
         // console.log(content) // what server returns to us?
 
         // this.setState({redirect: true})
         // this.redirectToLoginPage()   // for redirect to login but I could not
-
-
 
 
     }
@@ -160,7 +181,6 @@ class signup extends Component {
     //         return <Redirect to="/login"/>
     //     }
     // }
-
 
 
     inputChangedHandler = (event, inputIdentifier) => {
@@ -182,6 +202,11 @@ class signup extends Component {
         // console.log(formIsValid)
         this.setState({signupForm: updatedSignupForm, formIsValid: formIsValid})
     }
+
+
+    // openSignupModal = () => {
+    //
+    // }
 
 
     render() {
@@ -226,7 +251,7 @@ class signup extends Component {
                         {/*<input type="text" placeholder="آدرس خود را وارد کنید ..."  className={classes.labeledInputAddress}/>*/}
 
 
-                        <strong>فروشگاه - ثبت نام</strong>
+                        <strong className={classes.formHeader}>فروشگاه - ثبت نام</strong>
                         {formElementsArray.map(formElement => (
                             <LabeledInput
                                 key={formElement.id}
@@ -234,18 +259,28 @@ class signup extends Component {
                                 elementConfig={formElement.config.elementConfig}
                                 label={formElement.config.label}
                                 value={formElement.config.value}
-                                className={formElement.config.className}    //classes did not apply
+                                className={formElement.config.className}
                                 invalid={!formElement.config.valid}
                                 touched={formElement.config.touched}
                                 changed={(event) => this.inputChangedHandler(event, formElement.id)}
                             />
                         ))}
+                        <NewModal show={this.state.show} handleClose={this.hideModal}>
+                            <h1 className={classes.headerModal}>عملیات ثبت نام</h1>
+                        </NewModal>
                         <SignupButton
                             value="ثبت نام"
                             className={classes.signupButton}
                             disabled={!this.state.formIsValid}
                             type="submit"
+                            onClick={this.showModal}
                         />
+                        <h2 className={classes.h2Tag}>
+                            قبلا ثبت نام کرده اید ؟
+                            <Link to="/login">
+                                برو به صفحه ورود
+                            </Link>
+                        </h2>
                     </form>
                 </div>
                 <Footer className={classes.footerHereInSignup}/>

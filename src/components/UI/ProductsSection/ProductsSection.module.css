@@ -12,7 +12,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: flex-start;
-    background-color: lightgray;
+    background-color: rgb(247, 247, 247);
     padding: 10px;
     /*margin-bottom: 10px;*/
     height: 1200px;
@@ -25,7 +25,7 @@
     grid-area: sortByBox;
     /*border: 1px solid darkblue;*/
     padding: 10px;
-    background-color: lightgray;
+    background-color: rgb(247, 247, 247);
 
 }
 
@@ -46,7 +46,7 @@
     grid-area: groupingBox;
     /*border: 1px solid black;*/
     padding: 10px;
-    background-color: lightgray;
+    background-color: rgb(247, 247, 247);
     /*margin-bottom: 10px;*/
     width: 365px;
     /*height: 310px;*/
