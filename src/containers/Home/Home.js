@@ -13,19 +13,33 @@ const home = () => {
     const [name, setName] = useState('')
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
+    // useEffect(() => {
+    //     (
+    //         async () => {
+    //             const response = await fetch('http://localhost:8000/api/user', {
+    //                 headers: {'Content-Type': 'application/json'},
+    //                 credentials: 'include',
+    //             })
+    //             // content here is user
+    //             const content = await response.json()
+    //             setName(content.name)
+    //         }
+    //     )()
+    // })
+
+
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
         (
             async () => {
-                const response = await fetch('http://localhost:8000/api/user', {
+                await fetch('http://localhost:8000/api/user', {
                     headers: {'Content-Type': 'application/json'},
                     credentials: 'include',
                 })
-                // content here is user
-                const content = await response.json()
-                setName(content.name)
             }
         )()
     })
+
 
     // const anotherFunc = (name) => {
     //     if (name) {
