@@ -20,7 +20,7 @@ class signup extends Component {
                 },
                 label: 'نام',
                 value: '',
-                className: 'classes.labeledInputName',
+                className: classes.labeledInputName,
                 validation: {
                     required: true,
                     maxLength: 255
@@ -36,7 +36,7 @@ class signup extends Component {
                 },
                 label: 'نام خانوادگی',
                 value: '',
-                className: 'classes.labeledInputFamilyName',
+                className: classes.labeledInputFamilyName,
                 validation: {
                     required: true,
                     maxLength: 255
@@ -52,7 +52,7 @@ class signup extends Component {
                 },
                 label: 'ایمیل',
                 value: '',
-                className: 'classes.labeledInputEmail',
+                className: classes.labeledInputEmail,
                 validation: {
                     required: true,
                     emailRegex: '[a-zA-Z0-9.]+@[a-zA-Z0-9]+\\.[A-Za-z]+',
@@ -69,7 +69,7 @@ class signup extends Component {
                 },
                 label: 'رمز عبور',
                 value: '',
-                className: 'classes.labeledInputPassword',
+                className: classes.labeledInputPassword,
                 validation: {
                     required: true,
                     minLength: 8,
@@ -87,7 +87,7 @@ class signup extends Component {
                 },
                 label: 'آدرس',
                 value: '',
-                className: 'classes.labeledInputAddress',
+                className: classes.labeledInputAddress,
                 validation: {
                     required: true,
                     maxLength: 1000
